@@ -150,7 +150,7 @@ class GPSA(nn.Module):
             )
 
         # self.mean_intercepts = torch.zeros([self.n_views, self.n_spatial_dims])
-        self.diagonal_offset = 1e-5
+        self.diagonal_offset = 1e-3  # 1e-5 originally
 
     def create_view_idx_dict(self, data_dict):
         """Summary
